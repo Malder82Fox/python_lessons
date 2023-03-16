@@ -4,6 +4,6 @@ sec = int(input('Введите количество целых секунд - '
 # minutes = (sec %  3600) // 60
 # seconds = sec % 60
 #
-# print(f' Время в формате чч:мм:сс - {hour}:{minutes}:{seconds}')
+# print(f"{hour:02}:{minutes:02}:{seconds:02}")
 
-print(f' Время в формате чч:мм:сс - {sec // 3600}:{(sec % 3600) // 60}:{sec % 60}')
+print(f' Время в формате чч:мм:сс - {sec // 3600:02}:{(sec % 3600) // 60:02}:{sec % 60:02}')

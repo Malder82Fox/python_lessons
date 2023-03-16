@@ -4,17 +4,16 @@
 # менее b километров. Программа должна принимать значения параметров a и b и выводить
 # одно натуральное число — номер дня.
 
-result_first = int(input('Введите результат первого дня, км - '))
-goal_result = int(input('Какой результата хотите достичь, км - '))
-day = 1
-
 while True:
+    day = 1
+    result_first = float(input('Введите результат первого дня, км - '))
+    goal_result = float(input('Какой результата хотите достичь, км - '))
+    if result_first <= 0 or goal_result <= result_first:
+        print('Мы должны улучшать результат !!!! Введи правильные значения !!!!')
+
     # result_first = result_first * 1.1
-    result_first *= 1.1
-    day += 1
-    if result_first >= goal_result:
-        break
-
-print(f'Вы достигните нужного результата на {day} день ')
-
-
+    else:
+        while result_first < goal_result:
+            result_first *= 1.1
+            day += 1
+        print(f'Вы достигните нужного результата на {day} день ')
