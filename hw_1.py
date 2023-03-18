@@ -2,8 +2,18 @@
 # элемента. Использовать функцию type() для проверки типа. Элементы списка можно не запрашивать у пользователя,
 # а указать явно, в программе.
 
-my_list = ('Bla-bla-bla', 1984, 36.6, 2+5j)
+a_str = 'python' # строка
+b_list = ['python', 'hello', 'world', 56, -5, 25.5] # список
+c_tuple = (1984, 1982, 1980, 'hello world') # кортеж
+d_dict = {'name': 'Tom', 'age': 56} # словарь
+perem_1 = set('bla-bla-bla') # множества изменяемые
+perem_2 = frozenset('bla-bla-bla') # множества не изменяемые
 
-for el in my_list:
+my_list = (1984, -360, 36.6, 2+5j, a_str, b_list, c_tuple, d_dict, perem_1, perem_2)
+
+for el_type in my_list: # цикл для переборки: строк, списков, кортежей, словарей
+    print(type(el_type))
+
+
 
 
