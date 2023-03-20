@@ -5,10 +5,13 @@
 
 my_list = list(input('Введите любые символы - '))
 
+print(type(my_list))
 print(f'Вы ввели - {my_list}\nСортируем ...')
 
 for i in range(0, len(my_list) - 1, 2): # range - конструирует диапазон (старт, стоп, шаг)  ;
     # len -возвращает количество элементов объекта
     my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i] # указываем, что нужно оменять местами два соседних элемента
 
-print(my_list)
+my_list = ''.join(my_list) # заменили разделители ","  в list на пустоту, и получили str
+print(type(my_list))
+print(f'И получаем результат: {my_list}')
